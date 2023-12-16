@@ -10,8 +10,19 @@ const calculate = () => {
   buttons.forEach((button) => {
     button.addEventListener('click', (e) => {
       let value = e.target.dataset.num;
-      console.log(value);
+      screen.value = screen.value + value;
     })
+  })
+
+  equal.addEventListener('click', () => {
+
+    let answer = eval(screen.value)
+    screen.value = answer;
+
+  })
+
+  clear.addEventListener('click', () => {
+    screen.value = ''
   })
 
 }
